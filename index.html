@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Квартира у Севастопольской и Каховской — экскурсия с домовёнком</title>
-<meta name="description" content="3 комнаты, 64,6 м², два балкона, 5 минут пешком до м. Севастопольская. 95 000 ₽ + счётчики. Пройдите экскурсию по квартире.">
+<meta name="description" content="3 комнаты, 64,6 м², два балкона, 5 минут пешком до м. Севастопольская. 100 000 ₽ + счётчики. Пройдите экскурсию по квартире.">
 <meta property="og:title" content="Квартира, которая сама проведёт вам экскурсию">
-<meta property="og:description" content="3 комнаты, 64,6 м², два балкона, 5 минут пешком до м. Севастопольская. 95 000 ₽ + счётчики.">
+<meta property="og:description" content="3 комнаты, 64,6 м², два балкона, 5 минут пешком до м. Севастопольская. 100 000 ₽ + счётчики.">
 <meta property="og:image" content="https://irinilou.github.io/kvartira-kahovskaya/img/bedroom.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="img/domovoy.png">
@@ -48,9 +48,9 @@ h1{margin:0;font:600 clamp(34px,5vw,56px)/1.08 'Unbounded','Golos Text',sans-ser
 .btn.white{background:#fff;color:var(--indigo)}
 .btn.ghost{background:transparent;border-color:#fff;color:#fff}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
-.tour-grid{display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:36px;align-items:start}
+.tour-grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px;align-items:stretch}
 .day-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
-@media (max-width:800px){.hero-grid,.day-grid,.tour-grid{grid-template-columns:1fr}.plan-col{max-width:300px}}
+@media (max-width:800px){.hero-grid,.day-grid{grid-template-columns:1fr}}
 .thumb{display:flex;flex-direction:column;gap:6px;padding:0;border:0;background:none;cursor:pointer;font:500 14px 'Golos Text',sans-serif;color:var(--ink);text-align:left}
 .thumb img{width:104px;height:78px;object-fit:cover;border-radius:10px;display:block}
 .avatar{border-radius:50%;background:var(--lav);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;flex:none}
@@ -58,7 +58,7 @@ h1{margin:0;font:600 clamp(34px,5vw,56px)/1.08 'Unbounded','Golos Text',sans-ser
 .bar{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
 .bar span{display:block;height:8px;background:var(--sage);width:0;transition:width .3s}
 .bar.indigo span{background:var(--indigo)}
-.plan{position:relative;width:100%;aspect-ratio:490/947}
+.plan{position:relative;aspect-ratio:490/947}
 .room{position:absolute;margin:0;padding:4px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);font:600 13px/1.2 'Golos Text',sans-serif;cursor:pointer}
 .room.s{font-weight:500;font-size:11px;padding:2px}
 .room.vert{writing-mode:vertical-rl;padding:0}
@@ -72,13 +72,10 @@ h1{margin:0;font:600 clamp(34px,5vw,56px)/1.08 'Unbounded','Golos Text',sans-ser
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .sw{display:inline-block;width:14px;height:14px;border-radius:3px}
 .sw.l{width:18px;height:6px}
-.photo{background:var(--oat);border-radius:20px;display:flex;justify-content:center;overflow:hidden}
-.photo-in{position:relative}
-.photo-in.v{display:inline-block;max-width:100%}
-.photo-in.v img{display:block;height:500px;max-width:100%;object-fit:cover}
-.photo-in.h{display:block;width:100%}
-.photo-in.h img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
-@media (max-width:560px){.photo-in.v img{height:420px}}
+.photo{position:relative;background:var(--oat);border-radius:20px;display:flex;justify-content:center;overflow:hidden;flex:1 1 auto;min-height:220px}
+.photo-in{position:relative;height:100%;max-width:100%;display:inline-block}
+.photo-in img{display:block;height:100%;width:auto;max-width:100%;object-fit:cover}
+.room-tag{position:absolute;left:12px;top:12px;margin:0;padding:6px 14px;border-radius:999px;background:rgba(251,250,247,.93);font:500 16px/1.3 'Unbounded','Golos Text',sans-serif;box-shadow:0 4px 14px -8px rgba(43,39,36,.5)}
 .spark{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;border:1.5px solid var(--sage-l);background:rgba(251,250,247,.9);cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;animation:spark 2.4s ease-in-out infinite}
 @keyframes spark{0%,100%{box-shadow:0 0 0 0 rgba(251,250,247,.9)}50%{box-shadow:0 0 0 8px rgba(251,250,247,0)}}
 .secret{position:absolute;left:12px;right:12px;bottom:12px;margin:0;background:#fff;border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.45}
@@ -97,6 +94,43 @@ input[type=range]{accent-color:var(--sage);flex:1 1 280px;height:44px}
 .card{flex:1 1 320px;display:flex;flex-direction:column;gap:14px;border:1.5px solid var(--line);border-radius:20px;padding:28px;background:#fff}
 ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 [hidden]{display:none!important}
+/* экскурсия: всё на одном экране */
+:root{--th:clamp(440px,calc(100vh - 214px),760px)}
+@supports (height:100svh){:root{--th:clamp(440px,calc(100svh - 214px),760px)}}
+#tour.section{padding:36px 0}
+.tour-grid{height:var(--th)}
+.plan{height:calc(var(--th) - 74px)}
+.legend{font-size:13px;gap:6px 12px}
+#stop{display:flex;flex-direction:column;gap:14px;min-width:0;min-height:0}
+.say{display:flex;gap:14px;align-items:flex-start}
+.tchips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tchips li{padding:6px 12px;border-radius:999px;background:#fff;font-size:14px;line-height:1.35}
+.pbar{min-width:180px}
+@media (max-width:800px){
+  #tour.section{padding:20px 0 28px}
+  #tour .wrap{gap:12px!important}
+  #tour .h2{font-size:26px}
+  .tour-sub{display:none}
+  .pbars{width:100%;gap:14px!important}
+  .pbar{min-width:0;flex:1 1 0}
+  .pbar span{font-size:13px!important}
+  .tour-grid{display:block;position:relative;height:auto}
+  .plan-col{position:absolute;top:8px;right:8px;z-index:4;width:72px;padding:5px;background:rgba(251,250,247,.92);border-radius:12px;box-shadow:0 6px 18px -10px rgba(43,39,36,.6)}
+  .plan{height:auto;width:100%}
+  .legend,.entry-label{display:none}
+  .room{font-size:0!important;padding:0!important;border-width:1px}
+  .mk.h{height:3px}.mk.v{width:3px!important}
+  .plan-col .plan-me{width:14px}
+  #stop{gap:10px}
+  .photo{flex:none;height:clamp(190px,33vh,340px);min-height:0}
+  .room-tag{font-size:13px;padding:5px 11px;left:8px;top:8px}
+  .say .avatar{display:none}
+  .bubble{font-size:15px;line-height:1.45;padding:10px 14px}
+  .tchips{display:block;font-size:13px;line-height:1.45;color:var(--text2)}
+  .tchips li{display:inline;padding:0;background:none;font-size:13px}
+  .tchips li+li::before{content:' · '}
+  #stop .btn{min-height:44px;padding:0 18px;font-size:15px}
+}
 .phone{font-variant-numeric:tabular-nums;white-space:nowrap}
 .phone.shown{animation:phoneGlow 1.2s ease}
 @keyframes phoneGlow{30%{color:#DCE5D6;text-shadow:0 0 18px rgba(220,229,214,.8)}}
@@ -185,7 +219,7 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .face{position:absolute;inset:0;border-radius:50%;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
 .face .n{font-size:clamp(34px,4vw,52px);line-height:1}
 .face .t{font-weight:600;font-size:14px;line-height:1.25;margin-top:6px}
-.face.back{transform:rotateY(180deg);background:#201E1D;color:#F9F4ED;padding:26px;font-size:15px;line-height:1.35}
+.face.back{transform:rotateY(180deg);background:#4A433C;color:#FBFAF7;padding:26px;font-size:15px;line-height:1.35}
 @media (max-width:480px){.face .t{font-size:13px}.face.back{padding:18px;font-size:13px}}
 /* тест */
 .qcard{background:#FFE1D0;border-radius:clamp(32px,6vw,64px);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:36px;align-items:center}
@@ -216,6 +250,23 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .fx .pt{position:absolute;width:16px;height:16px}
 .fx .pt svg{display:block}
 .fx .cf{position:absolute;display:block}
+/* лианы по краям: показывают, где мы на странице */
+.vine{display:none;position:fixed;top:0;bottom:0;width:70px;z-index:40;cursor:pointer;touch-action:none;-webkit-user-select:none;user-select:none}
+.vine.l{left:10px}.vine.r{right:10px}
+.vine svg{display:block;overflow:visible}
+.vg{transform-box:fill-box;transform-origin:0% 50%;transform:scale(.3);opacity:.35;transition:transform .55s cubic-bezier(.3,1.6,.5,1),opacity .4s}
+.vg.on{transform:none;opacity:1}
+.vleaf{transform-box:fill-box;transform-origin:0% 50%;animation:sway 4.5s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+.vflower{transform-box:fill-box;transform-origin:50% 50%;animation:spin 12s linear infinite}
+.vtip{transition:transform .12s linear}
+.vbud{position:absolute;left:24px;width:22px;height:22px;margin-top:-11px;padding:0;border:0;background:none;cursor:pointer}
+.vbud i{position:absolute;left:5px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--ground);border:2px solid var(--wood);box-sizing:border-box;transition:background-color .3s,transform .3s}
+.vbud.on i{background:var(--wood)}
+.vbud:hover i,.vbud:focus-visible i{transform:scale(1.35)}
+.vbud span{position:absolute;left:30px;top:50%;transform:translate(-6px,-50%);white-space:nowrap;padding:4px 10px;border-radius:999px;background:var(--ink);color:#fff;font:500 13px 'Golos Text',sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.vbud:hover span,.vbud:focus-visible span{opacity:1;transform:translate(0,-50%)}
+@media (min-width:1260px) and (hover:hover){.vine{display:block}.progress{display:none}}
 .progress{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--sage),var(--wood));transform-origin:0 50%;transform:scaleX(0);z-index:60}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -238,7 +289,8 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 <span class="chip">4 минуты пешком до м. Каховская</span>
 <span class="chip">3 комнаты, 64,6 м²</span>
 <span class="chip">9-й этаж из 12</span>
-<span class="chip ink">95 000 ₽ + счётчики</span>
+<span class="chip">Очень светлая: окна на 3 стороны</span>
+<span class="chip ink">100 000 ₽ + счётчики</span>
 </div>
 <div class="row hero-in" style="gap:12px;--d:.9s">
 <a href="#tour" class="btn big sage">Начать экскурсию</a>
@@ -273,20 +325,20 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 </div>
 
 <div id="tour" class="section oat">
-<div class="wrap stack" style="gap:32px">
+<div class="wrap stack" style="gap:18px">
 <div class="row rv" style="justify-content:space-between;align-items:flex-end;gap:16px">
 <div class="stack" style="gap:8px">
 <h2 class="h2">Экскурсия</h2>
-<p class="sub">Идите за домовёнком или нажимайте на комнаты на плане. В каждой комнате спрятана искорка с секретом.</p>
+<p class="sub tour-sub">Идите за домовёнком или нажимайте на комнаты на плане. В каждой комнате спрятана искорка с секретом.</p>
 </div>
-<div class="row" style="gap:24px">
-<div class="stack" style="gap:8px;min-width:180px"><span style="font-size:15px;font-weight:600" id="visited-label"></span><div class="bar"><span id="visited-bar"></span></div></div>
-<div class="stack" style="gap:8px;min-width:180px"><span style="font-size:15px;font-weight:600" id="found-label"></span><div class="bar indigo"><span id="found-bar"></span></div></div>
+<div class="row pbars" style="gap:24px">
+<div class="stack pbar" style="gap:8px"><span style="font-size:15px;font-weight:600" id="visited-label"></span><div class="bar"><span id="visited-bar"></span></div></div>
+<div class="stack pbar" style="gap:8px"><span style="font-size:15px;font-weight:600" id="found-label"></span><div class="bar indigo"><span id="found-bar"></span></div></div>
 </div>
 </div>
 
 <div class="tour-grid rv" style="--d:.12s">
-<div class="stack plan-col" style="gap:14px;width:100%;max-width:300px">
+<div class="stack plan-col" style="gap:12px">
 <div class="plan" id="plan">
 <button class="room s" data-room="kbalcony" aria-label="Балкон кухни" style="left:2.04%;top:0;width:35.1%;height:6.34%">балкон</button>
 <button class="room" data-room="kitchen" aria-label="Кухня" style="left:0;top:6.34%;width:37.14%;height:25.13%">Кухня</button>
@@ -322,7 +374,7 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 <span><i class="sw l" style="background:#7A4E26"></i>дверь</span>
 </div>
 </div>
-<div class="stack" style="gap:18px;min-width:0" id="stop"></div>
+<div id="stop"></div>
 </div>
 
 <div id="finish" hidden style="background:var(--indigo);color:#fff;border-radius:22px;padding:24px 28px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
@@ -330,7 +382,7 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 <img src="img/domovoy.png" alt="" style="width:72px;display:block;flex:none">
 <div class="stack" style="gap:6px">
 <p class="display" style="margin:0;font-weight:500;font-size:22px">Вы осмотрели всю квартиру</p>
-<p style="margin:0;color:#E4E1F2">Секрет для тех, кто дошёл до конца: залог 95 000 ₽ можно внести в два платежа, за первый и второй месяц.</p>
+<p style="margin:0;color:#E4E1F2">Секрет для тех, кто дошёл до конца: залог 100 000 ₽ можно внести в два платежа, за первый и второй месяц.</p>
 <p id="all-found" hidden style="margin:0;color:#E4E1F2">И все 10 искорок найдены. Домовёнок впечатлён.</p>
 </div>
 </div>
@@ -362,8 +414,8 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 <div id="sun" class="section oat">
 <div class="wrap stack" style="gap:28px">
 <div class="stack rv" style="gap:8px">
-<h2 class="h2">Где солнце в течение дня</h2>
-<p class="sub">Окна выходят на три стороны света. Подвиньте ползунок и посмотрите, где светло в это время.</p>
+<h2 class="h2">Здесь всегда светло</h2>
+<p class="sub">Окна выходят на восток, юг и запад, а девятый этаж выше деревьев, поэтому солнце в квартире с утра до вечера. Подвиньте ползунок и посмотрите, где оно сейчас.</p>
 </div>
 <div class="row rv" style="align-items:center;gap:20px;--d:.1s">
 <label for="hour" id="hour-label" class="display" style="font-weight:500;font-size:32px;min-width:110px">09:00</label>
@@ -409,8 +461,8 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 <div class="card">
 <h2 class="display" style="margin:0;font-weight:600;font-size:26px">Условия</h2>
 <ul class="list" style="gap:8px">
-<li>95 000 ₽ в месяц + счётчики</li>
-<li>Залог 95 000 ₽, можно внести в два платежа</li>
+<li>100 000 ₽ в месяц + счётчики</li>
+<li>Залог 100 000 ₽, можно внести в два платежа</li>
 <li>Для семьи до 4 человек, от 11 месяцев</li>
 <li>Без курения, питомцы по договорённости</li>
 <li>Договор и акт с описью имущества</li>
@@ -494,12 +546,12 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
   };
   var IDS = Object.keys(STOPS);
   var FACTS = [
-    { n: '5 мин', t: 'пешком до м. Севастопольская', back: 'Серая ветка: до центра без пересадок.', bg: '#C67139', fg: '#201E1D' },
-    { n: '4 мин', t: 'пешком до м. Каховская', back: 'Большая кольцевая: до любого района города.', bg: '#CCDBB2', fg: '#201E1D' },
-    { n: '64,6', t: 'м², три комнаты', back: 'Кухня 8,8 м² и раздельный санузел.', bg: '#FFC6A5', fg: '#201E1D' },
-    { n: '9/12', t: 'этаж, два лифта', back: 'Высоко и тихо, вид поверх деревьев.', bg: '#728157', fg: '#F9F4ED' },
-    { n: '2', t: 'балкона', back: 'Один у кухни, второй у гостиной. Оба застеклены.', bg: '#EBDDC5', fg: '#201E1D' },
-    { n: '3', t: 'стороны света', back: 'Восток, юг и запад: солнце с утра до вечера.', bg: '#33305A', fg: '#F9F4ED' }
+    { n: '5 мин', t: 'пешком до м. Севастопольская', back: 'Серая ветка: до центра без пересадок.', bg: '#D9BE9A', fg: '#2B2724' },
+    { n: '4 мин', t: 'пешком до м. Каховская', back: 'Большая кольцевая: до любого района города.', bg: '#DCE5D6', fg: '#2B2724' },
+    { n: '64,6', t: 'м², три комнаты', back: 'Кухня 8,8 м² и раздельный санузел.', bg: '#F3E3C2', fg: '#2B2724' },
+    { n: '9/12', t: 'этаж, два лифта', back: 'Высоко и тихо, вид поверх деревьев.', bg: '#5E7A5B', fg: '#FBFAF7' },
+    { n: '2', t: 'балкона', back: 'Один у кухни, второй у гостиной. Оба застеклены.', bg: '#EFE8DC', fg: '#2B2724' },
+    { n: '3', t: 'стороны света', back: 'Восток, юг и запад: в квартире светло с утра до вечера.', bg: '#B98A55', fg: '#FBFAF7' }
   ];
   var DAY = [
     { time: '07:30', title: 'Подъём', img: 'bedroom', text: 'Восточное окно спальни будит мягким солнцем. Дверь своя, так что никто не разбудит раньше времени.' },
@@ -522,9 +574,10 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
       { label: 'Тихий двор', perk: 'Двор закрыт шлагбаумом, машины стоят на парковке.' }] }
   ];
   var FAQ = [
+    { q: 'Светло ли в квартире?', a: 'Очень. Окна на три стороны света, а девятый этаж выше деревьев: солнце заглядывает в квартиру с утра до вечера.' },
     { q: 'Можно с детьми?', a: 'Да, квартира как раз для семьи: есть отдельная спальня и комната, которую легко сделать детской.' },
     { q: 'А с питомцем?', a: 'По договорённости с собственником, с доплатой.' },
-    { q: 'Какой залог?', a: '95 000 ₽. Его можно внести в два платежа: за первый и второй месяц.' },
+    { q: 'Какой залог?', a: '100 000 ₽. Его можно внести в два платежа: за первый и второй месяц.' },
     { q: 'На какой срок сдаётся квартира?', a: 'От 11 месяцев, по договору с актом приёма-передачи и описью.' },
     { q: 'Мебель и техника есть?', a: 'Да: двуспальная кровать, раскладной диван, шкафы, холодильник, стиральная машина и газовая плита.' },
     { q: 'Где парковаться?', a: 'Во дворе за шлагбаумом есть парковка.' },
@@ -630,8 +683,8 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
     if (!b) return;
     if (!me) { me = document.createElement('span'); me.className = 'plan-me'; me.innerHTML = '<img src="img/domovoy.png" alt="">'; $('plan').appendChild(me); }
     var l = parseFloat(b.style.left), t = parseFloat(b.style.top), w = parseFloat(b.style.width), h = parseFloat(b.style.height);
-    me.style.left = (l + w * (w > 20 ? .8 : .5)) + '%';
-    me.style.top = (t + h * (w > 20 ? .5 : .25) + (h < 7 ? 1 : 0)) + '%';
+    me.style.left = (w > 20 ? l + w - 5 : l + w / 2) + '%';
+    me.style.top = (w > 20 ? t + h - (h > 12 ? 3 : 1.6) : t + h * .25 + (h < 7 ? 1 : 0)) + '%';
     restart(me, 'go');
   }
   function renderTour() {
@@ -644,16 +697,16 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
       buttons[i].classList.toggle('visited', has(st.visited, r));
     }
     var found = has(st.found, st.cur);
-    var photo = '<div class="photo' + (changed ? ' anim-photo' : '') + '"><div class="photo-in ' + (s.v ? 'v' : 'h') + '"><img src="' + img(st.cur) + '" alt="' + s.alt + '">' +
+    var photo = '<div class="photo' + (changed ? ' anim-photo' : '') + '"><div class="photo-in"><img src="' + img(st.cur) + '" alt="' + s.alt + '"><p class="room-tag">' + s.title + '</p>' +
       (found ? '<p class="secret"><strong>Секрет домовёнка. </strong>' + s.secret + '</p>'
              : '<button class="spark" data-spark="1" aria-label="Секрет домовёнка" style="left:' + s.sx + ';top:' + s.sy + '">' + STAR + '</button>') +
       '</div></div>';
     $('stop').innerHTML = photo +
-      '<div style="display:flex;gap:14px;align-items:flex-start"><div class="avatar' + (changed ? ' anim-hop' : '') + '" style="width:56px;height:56px"><img src="img/domovoy.png" alt="" style="width:42px;display:block;margin-bottom:-3px"></div><p class="bubble' + (changed ? ' anim-bubble' : '') + '">' + s.line + '</p></div>' +
-      '<div class="stack" style="gap:10px"><h3 class="h3">' + s.title + '</h3><ul class="list' + (changed ? ' anim-list' : '') + '">' + s.facts.map(function (f, i) { return '<li style="--i:' + i + '">' + f + '</li>'; }).join('') + '</ul></div>' +
+      '<div class="say"><div class="avatar' + (changed ? ' anim-hop' : '') + '" style="width:56px;height:56px"><img src="img/domovoy.png" alt="" style="width:42px;display:block;margin-bottom:-3px"></div><p class="bubble' + (changed ? ' anim-bubble' : '') + '">' + s.line + '</p></div>' +
+      '<ul class="tchips' + (changed ? ' anim-list' : '') + '">' + s.facts.map(function (f, i) { return '<li style="--i:' + i + '">' + f + '</li>'; }).join('') + '</ul>' +
       '<div class="row" style="gap:12px"><button class="btn dark" data-next="1">' + s.nextLabel + '</button>' + (s.back ? '<button class="btn outline" data-back="1">Назад</button>' : '') + '</div>';
-    $('visited-label').textContent = 'Осмотрено ' + st.visited.length + ' из 10';
-    $('found-label').textContent = 'Секретов найдено ' + st.found.length + ' из 10';
+    $('visited-label').textContent = 'Комнат: ' + st.visited.length + ' из 10';
+    $('found-label').textContent = 'Секретов: ' + st.found.length + ' из 10';
     $('visited-bar').style.width = (st.visited.length * 10) + '%';
     $('found-bar').style.width = (st.found.length * 10) + '%';
     var wasHidden = $('finish').hidden;
@@ -811,12 +864,112 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
     for (var r2 = 0; r2 < rvEls.length; r2++) rvEls[r2].classList.remove('rv', 'rv-kids');
   }
 
+  /* лианы по краям экрана: растут по мере прокрутки, цветок показывает, где мы */
+  var SECTIONS = [['facts', 'Квартира в цифрах'], ['tour', 'Экскурсия'], ['day', 'Ваш день'], ['sun', 'Солнце'], ['quiz', 'Подходит ли'], ['contacts', 'Контакты']];
+  var LEAF = ['#5E7A5B', '#7E9A72', '#9BB894', '#4E6A4B'];
+  var vines = [];
+  function makeVine(side, phase) {
+    var box = document.createElement('div');
+    box.className = 'vine ' + side;
+    box.setAttribute('aria-hidden', side === 'r' ? 'true' : 'false');
+    document.body.appendChild(box);
+    var v = { box: box, phase: phase, side: side };
+    box.addEventListener('pointerdown', function (e) {
+      if (e.target.closest('.vbud')) return;
+      box.setPointerCapture(e.pointerId); v.drag = true; jump(e.clientY);
+    });
+    box.addEventListener('pointermove', function (e) { if (v.drag) jump(e.clientY); });
+    box.addEventListener('pointerup', function () { v.drag = false; });
+    box.addEventListener('pointercancel', function () { v.drag = false; });
+    vines.push(v);
+    return v;
+  }
+  function jump(y) {
+    var H = innerHeight, k = Math.max(0, Math.min(1, (y - 30) / (H - 60)));
+    scrollTo(0, k * (document.documentElement.scrollHeight - H));
+  }
+  function buildVine(v) {
+    var H = innerHeight, top = 30, bot = H - 30, pts = [], cum = [0], d = '';
+    for (var y = top; y <= bot; y += 6) {
+      var x = 35 + 11 * Math.sin(y / 75 + v.phase) + 4 * Math.sin(y / 24 + v.phase * 2);
+      pts.push([x, y]);
+    }
+    for (var i = 0; i < pts.length; i++) {
+      d += (i ? 'L' : 'M') + pts[i][0].toFixed(1) + ' ' + pts[i][1];
+      if (i) cum.push(cum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    }
+    var L = cum[cum.length - 1], g = '', leaves = [];
+    for (var j = 4, n = 0; j < pts.length - 2; j += 8, n++) {
+      var a = Math.atan2(pts[j + 1][1] - pts[j - 1][1], pts[j + 1][0] - pts[j - 1][0]) * 180 / Math.PI;
+      var flip = n % 2 ? 1 : -1, sc = 1.15 + (n * 37 % 5) / 10;
+      g += '<g transform="translate(' + pts[j][0].toFixed(1) + ' ' + pts[j][1] + ') rotate(' + (a + flip * 58).toFixed(1) + ') scale(' + sc.toFixed(2) + ')"><g class="vg" data-y="' + pts[j][1] + '">';
+      if (n % 6 === 5) {
+        g += '<g class="vleaf" style="animation-delay:-' + (n * .7 % 4.5).toFixed(1) + 's"><path d="M0 0L9 0" stroke="#5E7A5B" stroke-width="1.6"/><circle cx="12" cy="-2" r="3.4" fill="#B98A55"/><circle cx="12.5" cy="4" r="3" fill="#D9BE9A"/><circle cx="17" cy="1" r="2.6" fill="#B98A55"/></g>';
+      } else {
+        g += '<g class="vleaf" style="animation-delay:-' + (n * .7 % 4.5).toFixed(1) + 's"><path d="M0 0C5 -9 17 -10 25 0C17 10 5 9 0 0Z" fill="' + LEAF[n % LEAF.length] + '" stroke="rgba(43,39,36,.15)" stroke-width=".8"/><path d="M3 0H19" stroke="rgba(251,250,247,.45)" stroke-width="1.2" stroke-linecap="round"/></g>';
+      }
+      g += '</g></g>';
+      if (n % 4 === 2) {
+        var cx = pts[j][0] - flip * 9, cy = pts[j][1] + 10;
+        g += '<path d="M' + pts[j][0].toFixed(1) + ' ' + pts[j][1] + 'q' + (-flip * 10) + ' 4 ' + (-flip * 8) + ' 12q-1 5 ' + (flip * 3) + ' 5" fill="none" stroke="#9BB894" stroke-width="1.4" stroke-linecap="round" class="vg" data-y="' + pts[j][1] + '"/>';
+      }
+    }
+    v.box.innerHTML = '<svg width="70" height="' + H + '" viewBox="0 0 70 ' + H + '">' +
+      '<path d="' + d + '" fill="none" stroke="#E2DBCF" stroke-width="3" stroke-linecap="round"/>' +
+      '<path class="vgrown" d="' + d + '" fill="none" stroke="#5E7A5B" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="' + L.toFixed(1) + '" stroke-dashoffset="' + L.toFixed(1) + '"/>' +
+      g +
+      '<g class="vtip"><g class="vflower">' +
+      [0, 72, 144, 216, 288].map(function (r) { var t = r * Math.PI / 180; return '<ellipse cx="' + (Math.cos(t) * 7).toFixed(1) + '" cy="' + (Math.sin(t) * 7).toFixed(1) + '" rx="6" ry="4.4" transform="rotate(' + r + ' ' + (Math.cos(t) * 7).toFixed(1) + ' ' + (Math.sin(t) * 7).toFixed(1) + ')" fill="#F3E3C2" stroke="#D9BE9A" stroke-width="1"/>'; }).join('') +
+      '<circle r="4.6" fill="#B98A55"/><circle cx="-1.4" cy="-1.4" r="1.4" fill="#F3E3C2" opacity=".7"/></g></g></svg>';
+    v.pts = pts; v.cum = cum; v.L = L;
+    v.grown = v.box.querySelector('.vgrown');
+    v.tip = v.box.querySelector('.vtip');
+    v.parts = v.box.querySelectorAll('.vg');
+    v.buds = [];
+    if (v.side === 'l') SECTIONS.forEach(function (sct) {
+      var b = document.createElement('button');
+      b.className = 'vbud'; b.type = 'button';
+      b.setAttribute('aria-label', 'К разделу «' + sct[1] + '»');
+      b.innerHTML = '<i></i><span>' + sct[1] + '</span>';
+      b.addEventListener('click', function () { scrollToId(sct[0]); });
+      v.box.appendChild(b);
+      v.buds.push({ el: b, id: sct[0] });
+    });
+    placeBuds(v);
+  }
+  function placeBuds(v) {
+    var max = document.documentElement.scrollHeight - innerHeight;
+    v.buds.forEach(function (b) {
+      var el = $(b.id); if (!el || max <= 0) return;
+      var k = Math.max(0, Math.min(1, (el.getBoundingClientRect().top + scrollY) / max));
+      var idx = Math.round(k * (v.pts.length - 1));
+      b.k = k;
+      b.el.style.top = v.pts[idx][1] + 'px';
+      b.el.style.left = (v.pts[idx][0] - 11) + 'px';
+    });
+  }
+  function drawVine(v, k) {
+    if (!v.pts) return;
+    var idx = Math.round(k * (v.pts.length - 1)), pt = v.pts[idx];
+    v.grown.setAttribute('stroke-dashoffset', (v.L - v.cum[idx]).toFixed(1));
+    v.tip.setAttribute('transform', 'translate(' + pt[0].toFixed(1) + ' ' + pt[1] + ')');
+    for (var i = 0; i < v.parts.length; i++) v.parts[i].classList.toggle('on', Number(v.parts[i].getAttribute('data-y')) <= pt[1] + 2);
+    v.buds.forEach(function (b) { b.el.classList.toggle('on', b.k <= k + .002); });
+  }
+  makeVine('l', 0); makeVine('r', 2.2);
+  function rebuildVines() { vines.forEach(buildVine); onScroll(); }
+  vines.forEach(buildVine);
+  var rzT;
+  addEventListener('resize', function () { clearTimeout(rzT); rzT = setTimeout(rebuildVines, 150); });
+  if ('ResizeObserver' in window) new ResizeObserver(function () { vines.forEach(placeBuds); onScroll(); }).observe(document.body);
+
   /* полоса прокрутки */
   var pb = $('progress'), ticking = false;
   function onScroll() {
     ticking = false;
-    var max = document.documentElement.scrollHeight - innerHeight;
-    pb.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+    var max = document.documentElement.scrollHeight - innerHeight, k = max > 0 ? Math.min(1, scrollY / max) : 0;
+    pb.style.transform = 'scaleX(' + k + ')';
+    vines.forEach(function (v) { drawVine(v, k); });
   }
   addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
