@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Квартира у Севастопольской и Каховской — экскурсия с домовёнком</title>
+<meta name="description" content="3 комнаты, 64,6 м², два балкона, 5 минут пешком до м. Севастопольская. 95 000 ₽ + счётчики. Пройдите экскурсию по квартире.">
+<meta property="og:title" content="Квартира, которая сама проведёт вам экскурсию">
+<meta property="og:description" content="3 комнаты, 64,6 м², два балкона, 5 минут пешком до м. Севастопольская. 95 000 ₽ + счётчики.">
+<meta property="og:image" content="https://irinilou.github.io/kvartira-kahovskaya/img/bedroom.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/domovoy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ground:#FBFAF7;--oat:#EFE8DC;--oat2:#F4EFE6;--ink:#2B2724;--muted:#6B635A;--text2:#4A433C;--line:#E2DBCF;--sage:#5E7A5B;--sage-d:#4E6A4B;--sage-l:#DCE5D6;--wood:#B98A55;--visited:#E7D6BF;--indigo:#33305A;--lav:#E8E6F4;--sun:#F3E3C2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.55 'Golos Text',system-ui,sans-serif}
+img{max-width:100%}
+a{color:#3F5A3D}a:hover{color:var(--ink)}
+button{font-family:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--wood);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.narrow{max-width:820px}
+.display{font-family:'Unbounded','Golos Text',sans-serif}
+h1{margin:0;font:600 clamp(34px,5vw,56px)/1.08 'Unbounded','Golos Text',sans-serif;letter-spacing:-.01em}
+.h2{margin:0;font:600 clamp(28px,3.4vw,40px)/1.15 'Unbounded','Golos Text',sans-serif}
+.h3{margin:0;font:500 24px/1.25 'Unbounded','Golos Text',sans-serif}
+.lead{margin:0;max-width:34em;font-size:19px;color:var(--text2)}
+.sub{margin:0;color:var(--text2);max-width:36em}
+.muted{color:var(--muted);font-size:15px}
+.stack{display:flex;flex-direction:column}
+.row{display:flex;flex-wrap:wrap}
+.section{padding:72px 0}
+.oat{background:var(--oat2)}
+.chip{padding:8px 14px;border-radius:999px;background:var(--oat);font-size:15px;font-weight:500}
+.chip.sage{background:var(--sage-l);font-weight:600}
+.chip.ink{background:var(--ink);color:#fff;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:12px;font:600 16px 'Golos Text',sans-serif;text-decoration:none;cursor:pointer;border:1.5px solid transparent}
+.btn.big{min-height:52px;padding:0 28px;border-radius:14px}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.sage{background:var(--sage-d);color:#fff}
+.btn.outline{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn.light{background:var(--sage-l);color:var(--ink)}
+.btn.white{background:#fff;color:var(--indigo)}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.tour-grid{display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:36px;align-items:start}
+.day-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.facts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:800px){.hero-grid,.day-grid,.tour-grid{grid-template-columns:1fr}.facts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.plan-col{max-width:300px}}
+.thumb{display:flex;flex-direction:column;gap:6px;padding:0;border:0;background:none;cursor:pointer;font:500 14px 'Golos Text',sans-serif;color:var(--ink);text-align:left}
+.thumb img{width:104px;height:78px;object-fit:cover;border-radius:10px;display:block}
+.avatar{border-radius:50%;background:var(--lav);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;flex:none}
+.bubble{margin:0;background:#fff;border-radius:4px 18px 18px 18px;padding:14px 18px}
+.fact{min-height:150px;padding:22px;border-radius:20px;border:1.5px solid var(--line);background:#fff;color:var(--ink);text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.fact.open{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.fact .big{font:600 30px/1.1 'Unbounded','Golos Text',sans-serif}
+@media (max-width:480px){.fact{padding:16px;min-height:130px}.fact .big{font-size:21px}}
+.bar{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.bar span{display:block;height:8px;background:var(--sage);width:0;transition:width .3s}
+.bar.indigo span{background:var(--indigo)}
+.plan{position:relative;width:100%;aspect-ratio:490/947}
+.room{position:absolute;margin:0;padding:4px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);font:600 13px/1.2 'Golos Text',sans-serif;cursor:pointer}
+.room.s{font-weight:500;font-size:11px;padding:2px}
+.room.vert{writing-mode:vertical-rl;padding:0}
+.room.visited{background:var(--visited)}
+.room[aria-pressed="true"]{background:var(--sage);color:#fff}
+.mk{position:absolute;border-radius:3px;pointer-events:none}
+.mk.win{background:#8DBBE0}.mk.door{background:#7A4E26}.mk.entry{background:var(--ink)}
+.mk.h{height:6px;transform:translateY(-50%)}.mk.v{width:6px;transform:translateX(-50%)}
+.entry-label{position:absolute;left:1.8%;top:51.74%;height:6.65%;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;font-weight:600;line-height:1;pointer-events:none}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px;font-size:14px;color:var(--text2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px}
+.sw.l{width:18px;height:6px}
+.photo{background:var(--oat);border-radius:20px;display:flex;justify-content:center;overflow:hidden}
+.photo-in{position:relative}
+.photo-in.v{display:inline-block;max-width:100%}
+.photo-in.v img{display:block;height:500px;max-width:100%;object-fit:cover}
+.photo-in.h{display:block;width:100%}
+.photo-in.h img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:560px){.photo-in.v img{height:420px}}
+.spark{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;border:1.5px solid var(--sage-l);background:rgba(251,250,247,.9);cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;animation:spark 2.4s ease-in-out infinite}
+@keyframes spark{0%,100%{box-shadow:0 0 0 0 rgba(251,250,247,.9)}50%{box-shadow:0 0 0 8px rgba(251,250,247,0)}}
+.secret{position:absolute;left:12px;right:12px;bottom:12px;margin:0;background:#fff;border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.45}
+.secret strong{color:var(--indigo)}
+.time{flex:none;min-height:56px;padding:6px 18px;border-radius:14px;border:1.5px solid #D6CEC2;background:#fff;color:var(--ink);cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.time[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.time b{font-size:16px}.time small{font-size:13px}
+.sun{flex:1 1 220px;border-radius:18px;padding:22px;border:2px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:6px}
+.sun.on{background:var(--sun);border-color:var(--wood)}
+.sun .t{font:500 20px/1.25 'Unbounded','Golos Text',sans-serif}
+input[type=range]{accent-color:var(--sage);flex:1 1 280px;height:44px}
+.opt{min-height:46px;padding:0 20px;border-radius:12px;border:1.5px solid #D6CEC2;background:#fff;color:var(--ink);font:500 16px 'Golos Text',sans-serif;cursor:pointer}
+.opt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.result{border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.faq{background:#fff;border-radius:16px;overflow:hidden}
+.faq button{width:100%;min-height:60px;padding:14px 20px;border:0;background:none;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;cursor:pointer;font:600 17px 'Golos Text',sans-serif;color:var(--ink)}
+.faq .sign{font-size:24px;line-height:1;color:var(--sage)}
+.faq p{margin:0;padding:0 20px 18px;color:var(--text2)}
+.card{flex:1 1 320px;display:flex;flex-direction:column;gap:14px;border:1.5px solid var(--line);border-radius:20px;padding:28px;background:#fff}
+ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+[hidden]{display:none!important}
+/* ---------- анимации ---------- */
+.btn,.opt,.time,.fact,.room,.sun{transition:transform .25s ease,box-shadow .25s ease,background-color .35s,color .35s,border-color .35s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(43,39,36,.55)}
+.opt:hover,.time:hover{transform:translateY(-2px)}
+.btn:active,.opt:active,.time:active,.fact:active{transform:scale(.97)}
+.thumb img{transition:transform .35s ease,box-shadow .35s ease}
+.thumb:hover img{transform:translateY(-4px) rotate(-2deg);box-shadow:0 12px 24px -14px rgba(43,39,36,.7)}
+.fact:hover{transform:translateY(-3px);box-shadow:0 16px 30px -20px rgba(51,48,90,.6)}
+.fact.flip{animation:flip .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes flip{from{transform:perspective(700px) rotateY(-95deg);opacity:.2}to{transform:none;opacity:1}}
+.hero-photo img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.hero-photo:hover img{transform:scale(1.045)}
+.bob{animation:bob 3.4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-3deg)}}
+.wave{animation:wave 4.5s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes wave{0%,55%,100%{transform:rotate(0)}60%{transform:rotate(-11deg)}66%{transform:rotate(9deg)}72%{transform:rotate(-7deg)}78%{transform:rotate(5deg)}84%{transform:rotate(0)}}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:none}}
+@keyframes hop{0%,100%{transform:none}30%{transform:translateY(-12px)}55%{transform:none}72%{transform:translateY(-4px)}}
+@keyframes clipIn{from{clip-path:inset(0 0 100% 0 round 24px)}to{clip-path:inset(0 0 0 0 round 24px)}}
+.js-motion .hero-in{animation:up .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+.js-motion .pop{animation:pop .6s cubic-bezier(.3,1.5,.5,1) both;animation-delay:var(--d,0s)}
+.js-motion .hero-photo{animation:clipIn 1.1s cubic-bezier(.6,0,.2,1) .15s both}
+.js-motion h1 .w{display:inline-block;animation:up .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+.hero-bubble{transform-origin:0 100%}
+/* появление при прокрутке */
+.js-motion .rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js-motion .rv.in{opacity:1;transform:none}
+.js-motion .rv-kids>*{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js-motion .rv-kids.in>*{opacity:1;transform:none}
+.rv-kids>:nth-child(2){transition-delay:.08s}.rv-kids>:nth-child(3){transition-delay:.16s}.rv-kids>:nth-child(4){transition-delay:.24s}
+.rv-kids>:nth-child(5){transition-delay:.32s}.rv-kids>:nth-child(6){transition-delay:.4s}.rv-kids>:nth-child(7){transition-delay:.48s}
+/* экскурсия */
+.anim-photo img{animation:photoIn .75s cubic-bezier(.2,.7,.2,1) both}
+@keyframes photoIn{from{opacity:0;transform:scale(1.07)}to{opacity:1;transform:none}}
+.anim-hop{animation:hop .7s ease both}
+.anim-bubble{animation:pop .5s cubic-bezier(.3,1.4,.5,1) .12s both;transform-origin:0 0}
+.anim-list li{animation:up .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.2s + var(--i)*.08s)}
+.secret{animation:secretIn .5s cubic-bezier(.3,1.3,.5,1) both}
+@keyframes secretIn{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+.spark svg{animation:twinkle 2.4s ease-in-out infinite}
+@keyframes twinkle{50%{transform:rotate(45deg) scale(1.2)}}
+.spark:hover{background:#fff}
+.bar span{transition:width .7s cubic-bezier(.3,1.3,.5,1)}
+.bump{animation:bump .45s ease;transform-origin:0 50%}
+@keyframes bump{40%{transform:scale(1.12);color:var(--sage-d)}}
+.room[aria-pressed="true"]{animation:roomPulse 2.4s ease-in-out infinite}
+@keyframes roomPulse{0%,100%{box-shadow:inset 0 0 0 0 rgba(255,255,255,0)}50%{box-shadow:inset 0 0 0 4px rgba(255,255,255,.55)}}
+.plan-me{position:absolute;z-index:3;width:24px;transform:translate(-50%,-55%);pointer-events:none;transition:left .75s cubic-bezier(.5,0,.3,1),top .75s cubic-bezier(.5,0,.3,1);filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+.plan-me img{display:block;width:100%}
+.plan-me.go img{animation:hop .75s ease}
+#finish.show{animation:pop .7s cubic-bezier(.3,1.4,.5,1) both}
+/* день */
+.swap{animation:photoIn .6s cubic-bezier(.2,.7,.2,1) both}
+.swap-t{animation:up .5s cubic-bezier(.2,.7,.2,1) both}
+/* солнце */
+.sky{position:relative;height:180px;border-radius:22px;overflow:hidden;background:#DCE8F0;transition:background-color .6s}
+.sky::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,0) 40%,rgba(255,255,255,.45));pointer-events:none}
+.sky svg{position:absolute;inset:0;width:100%;height:100%}
+.sky path{fill:none;stroke:rgba(43,39,36,.25);stroke-width:2;stroke-dasharray:6 8;vector-effect:non-scaling-stroke}
+.sky.night path{stroke:rgba(255,255,255,.35)}
+.sunball{position:absolute;width:46px;height:46px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 40%,#FFF3C4,#FFC94D 60%,#F2A93B);box-shadow:0 0 0 10px rgba(255,214,102,.25),0 0 50px 16px rgba(255,200,80,.45);transition:left .35s linear,top .35s linear,background .6s,box-shadow .6s;z-index:1}
+.sunball::before{content:"";position:absolute;inset:-18px;border-radius:50%;border:2px dashed rgba(255,190,60,.55);animation:spin 14s linear infinite}
+.sky.night .sunball{background:radial-gradient(circle at 40% 40%,#FFE7C4,#F7A86A 60%,#E0794A);box-shadow:0 0 40px 10px rgba(240,140,90,.45)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sky-l{position:absolute;bottom:12px;z-index:2;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(43,39,36,.6);transition:color .6s}
+.sky.night .sky-l{color:rgba(255,255,255,.8)}
+.sky-dom{position:absolute;left:50%;bottom:-8px;width:54px;transform:translateX(-50%);z-index:2}
+.sky-dom img{display:block;width:100%}
+.sun.on{transform:translateY(-4px);box-shadow:0 14px 30px -20px rgba(185,138,85,.8)}
+/* квиз, faq */
+.opt.just{animation:pop .35s cubic-bezier(.3,1.6,.5,1)}
+.result.anim{animation:pop .55s cubic-bezier(.3,1.4,.5,1) both}
+.faq p{animation:up .4s cubic-bezier(.2,.7,.2,1) both}
+.faq button[aria-expanded="true"] .sign{display:inline-block;animation:spinIn .35s ease}
+@keyframes spinIn{from{transform:rotate(-180deg)}}
+/* частицы и прогресс */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.fx .pt{position:absolute;width:16px;height:16px}
+.fx .pt svg{display:block}
+.fx .cf{position:absolute;display:block}
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--sage),var(--wood));transform-origin:0 50%;transform:scaleX(0);z-index:60}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="wrap row" style="padding-top:20px;justify-content:space-between;align-items:center;gap:12px">
+<span class="muted">Москва, Симферопольский бульвар</span>
+<a href="tel:+79099453687" style="font-weight:600;text-decoration:none;font-size:15px">Алика, +7 909 945-36-87</a>
+</div>
+
+<div class="wrap" style="padding-top:40px;padding-bottom:64px">
+<div class="hero-grid">
+<div class="stack" style="gap:24px;min-width:0">
+<h1>Квартира, которая сама проведёт вам экскурсию</h1>
+<p class="lead hero-in" style="--d:.45s">Три комнаты, два балкона и 5 минут пешком до Севастопольской. Домовёнок покажет всё за пару минут, а в конце поможет понять, подходит ли квартира именно вам.</p>
+<div class="row" id="chips" style="gap:8px">
+<span class="chip sage">5 минут пешком до м. Севастопольская</span>
+<span class="chip">4 минуты пешком до м. Каховская</span>
+<span class="chip">3 комнаты, 64,6 м²</span>
+<span class="chip">9-й этаж из 12</span>
+<span class="chip ink">95 000 ₽ + счётчики</span>
+</div>
+<div class="row hero-in" style="gap:12px;--d:.9s">
+<a href="#tour" class="btn big sage">Начать экскурсию</a>
+<a href="#contacts" class="btn big outline">Связаться с Аликой</a>
+</div>
+<div class="stack hero-in" style="gap:10px;padding-top:8px;--d:1.05s">
+<span class="muted">Или сразу загляните в комнату:</span>
+<div class="row" style="gap:10px">
+<button class="thumb" data-jump="kitchen"><img src="img/kitchen.jpg" alt="">Кухня</button>
+<button class="thumb" data-jump="bedroom"><img src="img/bedroom.jpg" alt="">Спальня</button>
+<button class="thumb" data-jump="room"><img src="img/room.jpg" alt="">Комната</button>
+<button class="thumb" data-jump="living"><img src="img/living.jpg" alt="">Гостиная</button>
+</div>
+</div>
+</div>
+<div style="position:relative;min-width:0;padding-bottom:72px">
+<button class="hero-photo" data-jump="bedroom" aria-label="Открыть спальню в экскурсии" style="display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;border-radius:24px;overflow:hidden"><img src="img/bedroom.jpg" alt="Спальня с двуспальной кроватью" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></button>
+<div style="position:absolute;left:-12px;bottom:0;display:flex;align-items:flex-end;gap:12px;max-width:100%">
+<div class="avatar pop" style="width:136px;height:136px;border:4px solid var(--ground);--d:1.1s"><img class="bob" src="img/domovoy.png" alt="Домовёнок" style="width:100px;display:block;margin-bottom:-6px"></div>
+<p class="hero-bubble pop" style="--d:1.4s;margin:0 0 12px;background:#fff;border:1.5px solid var(--line);border-radius:18px 18px 18px 4px;padding:12px 16px;font-size:15px;max-width:280px">Я домовёнок этой квартиры. Нажмите на фото, и я покажу спальню первой.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrap stack" style="padding-bottom:72px;gap:20px">
+<div class="row rv" style="justify-content:space-between;align-items:flex-end;gap:12px">
+<h2 class="display" style="margin:0;font-weight:600;font-size:clamp(24px,3vw,34px);line-height:1.15">Квартира в цифрах</h2>
+<span class="muted">Нажмите на карточку, чтобы узнать подробности</span>
+</div>
+<div class="facts-grid rv-kids" id="facts"></div>
+</div>
+
+<div id="tour" class="section oat">
+<div class="wrap stack" style="gap:32px">
+<div class="row rv" style="justify-content:space-between;align-items:flex-end;gap:16px">
+<div class="stack" style="gap:8px">
+<h2 class="h2">Экскурсия</h2>
+<p class="sub">Идите за домовёнком или нажимайте на комнаты на плане. В каждой комнате спрятана искорка с секретом.</p>
+</div>
+<div class="row" style="gap:24px">
+<div class="stack" style="gap:8px;min-width:180px"><span style="font-size:15px;font-weight:600" id="visited-label"></span><div class="bar"><span id="visited-bar"></span></div></div>
+<div class="stack" style="gap:8px;min-width:180px"><span style="font-size:15px;font-weight:600" id="found-label"></span><div class="bar indigo"><span id="found-bar"></span></div></div>
+</div>
+</div>
+
+<div class="tour-grid rv" style="--d:.12s">
+<div class="stack plan-col" style="gap:14px;width:100%;max-width:300px">
+<div class="plan" id="plan">
+<button class="room s" data-room="kbalcony" aria-label="Балкон кухни" style="left:2.04%;top:0;width:35.1%;height:6.34%">балкон</button>
+<button class="room" data-room="kitchen" aria-label="Кухня" style="left:0;top:6.34%;width:37.14%;height:25.13%">Кухня</button>
+<button class="room" data-room="bedroom" aria-label="Спальня" style="left:37.14%;top:6.34%;width:50%;height:30.31%">Спальня</button>
+<button class="room s" data-room="toilet" aria-label="Туалет" style="left:0;top:31.47%;width:22.86%;height:5.17%">туалет</button>
+<button class="room s" data-room="bath" aria-label="Ванная" style="left:0;top:36.64%;width:22.86%;height:9.61%">ванная</button>
+<button class="room s vert" data-room="corridor" aria-label="Коридор" style="left:22.86%;top:31.47%;width:14.29%;height:14.78%">коридор</button>
+<button class="room" data-room="hall" aria-label="Прихожая" style="left:0;top:46.25%;width:37.14%;height:18.48%">Прихожая</button>
+<button class="room" data-room="living" aria-label="Гостиная" style="left:37.14%;top:36.64%;width:50%;height:39.49%">Гостиная</button>
+<button class="room s vert" data-room="sbalcony" aria-label="Балкон гостиной" style="left:87.14%;top:40.34%;width:12.86%;height:21.75%">балкон</button>
+<button class="room" data-room="room" aria-label="Комната" style="left:37.14%;top:76.14%;width:50%;height:23.86%">Комната</button>
+<span class="mk win h" style="left:3.27%;top:0;width:32.65%"></span>
+<span class="mk win h" style="left:18.37%;top:6.34%;width:16.73%"></span>
+<span class="mk win h" style="left:53.06%;top:6.34%;width:24.49%"></span>
+<span class="mk win v" style="left:87.14%;top:48.26%;height:13.2%"></span>
+<span class="mk win v" style="left:100%;top:40.97%;height:20.49%"></span>
+<span class="mk win h" style="left:53.06%;top:100%;width:24.49%"></span>
+<span class="mk door h" style="left:10.61%;top:6.34%;width:6.53%"></span>
+<span class="mk door h" style="left:25.51%;top:31.47%;width:9.18%"></span>
+<span class="mk door v" style="left:37.14%;top:32.21%;height:3.7%"></span>
+<span class="mk door v" style="left:22.86%;top:32.52%;height:3.17%"></span>
+<span class="mk door v" style="left:22.86%;top:38.01%;height:4.22%"></span>
+<span class="mk door v" style="left:37.14%;top:47.52%;height:4.22%"></span>
+<span class="mk door v" style="left:87.14%;top:41.39%;height:5.81%"></span>
+<span class="mk door h" style="left:59.39%;top:76.14%;width:8.16%"></span>
+<span class="mk entry v" style="left:0;top:51.74%;height:6.65%;width:7px"></span>
+<span class="entry-label" aria-hidden="true">вход</span>
+</div>
+<div class="legend">
+<span><i class="sw" style="background:var(--sage)"></i>вы здесь</span>
+<span><i class="sw" style="background:var(--visited)"></i>уже осмотрели</span>
+<span><i class="sw l" style="background:#8DBBE0"></i>окно</span>
+<span><i class="sw l" style="background:#7A4E26"></i>дверь</span>
+</div>
+</div>
+<div class="stack" style="gap:18px;min-width:0" id="stop"></div>
+</div>
+
+<div id="finish" hidden style="background:var(--indigo);color:#fff;border-radius:22px;padding:24px 28px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:18px;max-width:46em">
+<img src="img/domovoy.png" alt="" style="width:72px;display:block;flex:none">
+<div class="stack" style="gap:6px">
+<p class="display" style="margin:0;font-weight:500;font-size:22px">Вы осмотрели всю квартиру</p>
+<p style="margin:0;color:#E4E1F2">Секрет для тех, кто дошёл до конца: залог 95 000 ₽ можно внести в два платежа, за первый и второй месяц.</p>
+<p id="all-found" hidden style="margin:0;color:#E4E1F2">И все 10 искорок найдены. Домовёнок впечатлён.</p>
+</div>
+</div>
+<a href="#quiz" class="btn white">Проверить, подходит ли</a>
+</div>
+</div>
+</div>
+
+<div id="day" class="wrap stack section" style="gap:28px">
+<div class="stack rv" style="gap:8px">
+<h2 class="h2">Ваш день в этой квартире</h2>
+<p class="sub">Выберите время и посмотрите, как проходит обычный будний день.</p>
+</div>
+<div class="row rv" id="times" style="--d:.1s;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px"></div>
+<div class="day-grid rv" style="--d:.2s">
+<img id="day-img" src="img/bedroom.jpg" alt="" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px">
+<div class="stack" id="day-txt" style="gap:14px">
+<span id="day-time" class="display" style="font-weight:500;font-size:44px;line-height:1;color:var(--indigo)"></span>
+<h3 id="day-title" class="h3"></h3>
+<p id="day-text" style="margin:0;font-size:18px"></p>
+<div class="row" style="gap:12px;padding-top:6px">
+<button class="btn outline" id="day-prev">Раньше</button>
+<button class="btn dark" id="day-next">Позже</button>
+</div>
+</div>
+</div>
+</div>
+
+<div id="sun" class="section oat">
+<div class="wrap stack" style="gap:28px">
+<div class="stack rv" style="gap:8px">
+<h2 class="h2">Где солнце в течение дня</h2>
+<p class="sub">Окна выходят на три стороны света. Подвиньте ползунок и посмотрите, где светло в это время.</p>
+</div>
+<div class="row rv" style="align-items:center;gap:20px;--d:.1s">
+<label for="hour" id="hour-label" class="display" style="font-weight:500;font-size:32px;min-width:110px">09:00</label>
+<input id="hour" type="range" min="7" max="21" step="0.25" value="9">
+<button class="btn outline" id="sun-play" type="button">▶ Прокрутить день</button>
+</div>
+<div class="sky rv" id="sky" aria-hidden="true" style="--d:.15s">
+<svg viewBox="0 0 1000 220" preserveAspectRatio="none"><path d="M40 210 Q500 -110 960 210"></path></svg>
+<div class="sunball" id="sunball"></div>
+<span class="sky-l" style="left:18px">восток</span><span class="sky-l" style="right:18px">запад</span>
+<div class="sky-dom"><img class="bob" src="img/domovoy.png" alt=""></div>
+</div>
+<p id="sun-line" style="margin:0;font-size:19px"></p>
+<div class="row rv-kids" style="gap:16px">
+<div class="sun" data-sun="east"><span class="muted" style="font-weight:600">Восток, утро</span><span class="t">Кухня и спальня</span><span class="note" style="font-size:15px"></span></div>
+<div class="sun" data-sun="south"><span class="muted" style="font-weight:600">Юг, день</span><span class="t">Гостиная и её балкон</span><span class="note" style="font-size:15px"></span></div>
+<div class="sun" data-sun="west"><span class="muted" style="font-weight:600">Запад, вечер</span><span class="t">Комната</span><span class="note" style="font-size:15px"></span></div>
+</div>
+</div>
+</div>
+
+<div id="quiz" class="wrap narrow stack section" style="gap:28px">
+<div class="stack rv" style="gap:8px">
+<h2 class="h2">Подходит ли вам квартира?</h2>
+<p class="sub" id="quiz-count">Пять вопросов, полминуты.</p>
+</div>
+<div class="stack rv" style="gap:28px;--d:.1s" id="quiz-list"></div>
+<div id="quiz-result" hidden></div>
+</div>
+
+<div class="section oat">
+<div class="wrap narrow stack" style="gap:20px">
+<h2 class="h2 rv">Частые вопросы</h2>
+<div class="stack rv-kids" style="gap:10px" id="faq"></div>
+</div>
+</div>
+
+<div class="wrap section row rv-kids" style="gap:24px">
+<div class="card">
+<h2 class="display" style="margin:0;font-weight:600;font-size:26px">Условия</h2>
+<ul class="list" style="gap:8px">
+<li>95 000 ₽ в месяц + счётчики</li>
+<li>Залог 95 000 ₽, можно внести в два платежа</li>
+<li>Для семьи до 4 человек, от 11 месяцев</li>
+<li>Без курения, питомцы по договорённости</li>
+<li>Договор и акт с описью имущества</li>
+</ul>
+</div>
+<div class="card">
+<h2 class="display" style="margin:0;font-weight:600;font-size:26px">Дом и район</h2>
+<ul class="list" style="gap:8px">
+<li>Севастопольская в 5 минутах пешком, Каховская в 4</li>
+<li>Закрытый двор со шлагбаумом</li>
+<li>Детская и спортивная площадки во дворе</li>
+<li>Парковка за шлагбаумом, под окнами машин нет</li>
+<li>12 этажей, два лифта, квартира на 9-м</li>
+</ul>
+</div>
+</div>
+
+<div id="contacts" style="background:var(--ink);color:#fff;padding:72px 0">
+<div class="wrap row" style="gap:32px;align-items:center;justify-content:space-between">
+<div class="stack rv" style="flex:999 1 480px;gap:22px;min-width:0">
+<h2 class="display" style="margin:0;font-weight:600;font-size:clamp(28px,3.4vw,44px);line-height:1.15">Хотите посмотреть вживую?</h2>
+<p style="margin:0;color:#E6E0D6;max-width:36em">Показывает Алика. Позвоните или напишите, договоримся об удобном времени.</p>
+<p class="display" style="margin:0;font-weight:500;font-size:clamp(24px,3vw,34px)">Алика, +7 909 945-36-87</p>
+<div class="row" style="gap:12px">
+<a href="tel:+79099453687" class="btn big light">Позвонить</a>
+<a href="https://wa.me/79099453687" target="_blank" rel="noopener" class="btn big ghost">Написать в WhatsApp</a>
+<a href="https://t.me/+79099453687" target="_blank" rel="noopener" class="btn big ghost">Написать в Telegram</a>
+<button class="btn big ghost" id="copy">Скопировать номер</button>
+</div>
+</div>
+<div style="flex:1 1 200px;display:flex;justify-content:center">
+<div class="avatar rv" style="width:220px;height:220px;--d:.2s"><img class="wave" src="img/domovoy.png" alt="Домовёнок машет на прощание" style="width:160px;display:block;margin-bottom:-10px"></div>
+</div>
+</div>
+</div>
+
+<script>
+(function () {
+  var STAR = '<svg width="16" height="16" viewBox="0 0 24 24" fill="#5E7A5B" aria-hidden="true"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"></path></svg>';
+  var STOPS = {
+    hall: { title: 'Прихожая', v: true, alt: 'Прихожая со встроенным шкафом, вешалкой и банкеткой',
+      line: 'Начнём с порога. Встроенный шкаф во всю стену, вешалка и обувница: куртки всей семьи и зимние ботинки найдут своё место.',
+      facts: ['Встроенный шкаф во всю стену', 'Вешалка, обувница и банкетка', 'Вместе с коридором 8,5 м²'],
+      sx: '18%', sy: '45%', secret: 'Шкаф двухсекционный, а наверху ещё антресоль для чемоданов.', next: 'corridor', nextLabel: 'Пройти по коридору' },
+    corridor: { title: 'Коридор', v: true, alt: 'Коридор с паркетом ёлочкой, ведущий на кухню',
+      line: 'Коридор ведёт прямо на кухню. По пути двери в ванную, туалет и спальню, а справа вход в гостиную.',
+      facts: ['Натуральный паркет «ёлочкой»', 'Раздельные ванная и туалет', 'Прямой путь на кухню'],
+      sx: '50%', sy: '86%', secret: 'Паркет настоящий, деревянный: в новостройках такой уже не кладут.', next: 'kitchen', nextLabel: 'Идём на кухню', back: 'hall' },
+    kitchen: { title: 'Кухня, 8,8 м²', v: true, alt: 'Кухня с газовой плитой, стиральной машиной и столом у окна',
+      line: 'Окна на восток, так что завтракаем при солнце. Плита, стиральная машина и холодильник уже на месте: привозите только любимую кружку.',
+      facts: ['Газовая плита Indesit', 'Стиральная машина и холодильник', 'Обеденный стол у окна и выход на балкон'],
+      sx: '43%', sy: '60%', secret: 'Холодильник и стиральная машина остаются в квартире.', next: 'kbalcony', nextLabel: 'Выйти на балкон', back: 'corridor' },
+    kbalcony: { title: 'Балкон кухни', v: true, alt: 'Застеклённый балкон кухни с видом на двор',
+      line: 'Первый из двух балконов. Застеклён, отделан, сверху сушилка для белья. Утренний кофе с видом на зелёный двор здесь заметно вкуснее.',
+      facts: ['Застеклён и отделан панелями', 'Потолочная сушилка для белья', 'Вид на деревья и двор'],
+      sx: '62%', sy: '24%', secret: 'Бельё сохнет под потолком балкона, а не посреди комнаты.', next: 'bedroom', nextLabel: 'Заглянуть в спальню', back: 'kitchen' },
+    bedroom: { title: 'Спальня, 14,4 м²', v: false, alt: 'Спальня с двуспальной кроватью и тумбочками',
+      line: 'Единственная комната со своей дверью из коридора, поэтому здесь тише всего. Отлично подходит родителям: утром будит солнце, а не соседи по квартире.',
+      facts: ['Двуспальная кровать 160×200', 'Окно на восток', 'Вместительные шкафы'],
+      sx: '50%', sy: '62%', secret: 'Кровать новая, с ортопедическим основанием, и матрас тоже новый.', next: 'living', nextLabel: 'Пройти в гостиную', back: 'kbalcony' },
+    living: { title: 'Гостиная, 18,7 м²', v: false, alt: 'Гостиная с диваном, журнальным столиком и светлым ковром',
+      line: 'Самая солнечная комната: окна на юг. Через неё проходят в третью комнату, так что по вечерам все и так собираются здесь.',
+      facts: ['Раскладной двуспальный диван', 'Окна на юг и выход на балкон', 'Журнальный столик и торшер'],
+      sx: '24%', sy: '62%', secret: 'Диван раскладывается в спальное место 200×180 для гостей.', next: 'sbalcony', nextLabel: 'На второй балкон', back: 'bedroom' },
+    sbalcony: { title: 'Балкон гостиной', v: true, alt: 'Застеклённый балкон гостиной со шкафчиком',
+      line: 'Второй балкон, из гостиной. Шкафчик для хранения уже стоит, а с девятого этажа видно полрайона. Мой любимый уголок.',
+      facts: ['Застеклён и отделан', 'Шкафчик для хранения', 'Вид с девятого этажа'],
+      sx: '55%', sy: '60%', secret: 'В шкафчик помещаются сезонные вещи: ёлка, санки, банки с вареньем.', next: 'room', nextLabel: 'В комнату за гостиной', back: 'living' },
+    room: { title: 'Комната', v: false, alt: 'Комната с тахтой, рабочим столом у окна и комодом',
+      line: 'Комната за гостиной: для взрослого сына или дочери, а можно и детскую. Рабочий стол у окна, вечером сюда заглядывает закат.',
+      facts: ['11,3 м², окно на запад', 'Рабочее место у окна', 'Тахта, комод и шкаф'],
+      sx: '42%', sy: '57%', secret: 'Стол стоит у окна: днём для работы хватает естественного света.', next: 'bath', nextLabel: 'Осталось самое практичное', back: 'living' },
+    bath: { title: 'Ванная, 2,1 м²', v: true, alt: 'Ванная с ванной и раковиной',
+      line: 'Ванная компактная, зато с настоящей ванной, а не душевой кабиной. И она отдельно от туалета, так что утром никто никого не ждёт.',
+      facts: ['Ванна и раковина с зеркалом', 'Санузел раздельный'],
+      sx: '42%', sy: '68%', secret: 'Ванна полноразмерная: можно полежать после работы.', next: 'toilet', nextLabel: 'Последняя дверь', back: 'room' },
+    toilet: { title: 'Туалет', v: true, alt: 'Туалет с новым унитазом и шкафом для коммуникаций',
+      line: 'Новый унитаз, а за дверцами шкафа спрятаны трубы и счётчики: всё под рукой, но не на виду. На этом осмотр комнат закончен.',
+      facts: ['Новый унитаз-компакт', 'Счётчики и коммуникации за дверцами'],
+      sx: '50%', sy: '28%', secret: 'Показания счётчиков снимаются за минуту: всё в одном шкафу.', next: 'day', nextLabel: 'Прожить день в этой квартире', back: 'bath' }
+  };
+  var IDS = Object.keys(STOPS);
+  var FACTS = [
+    { big: '5 минут', small: 'пешком до м. Севастопольская', back: 'Серая ветка: до центра без пересадок.' },
+    { big: '4 минуты', small: 'пешком до м. Каховская', back: 'Большая кольцевая линия: удобно ехать в любой район.' },
+    { big: '2 балкона', small: 'оба застеклены', back: 'Один у кухни для утреннего кофе, второй у гостиной с видом на район.' },
+    { big: '9 этаж', count: 9, small: 'из 12', back: 'Два лифта и вид поверх деревьев.' },
+    { big: '64,6 м²', count: 64.6, small: 'общая площадь', back: 'Три комнаты, кухня 8,8 м² и раздельный санузел.' },
+    { big: '3 стороны', small: 'света', back: 'Восток, юг и запад: солнце в квартире с утра до вечера.' }
+  ];
+  var DAY = [
+    { time: '07:30', title: 'Подъём', img: 'bedroom', text: 'Восточное окно спальни будит мягким солнцем. Дверь своя, так что никто не разбудит раньше времени.' },
+    { time: '08:00', title: 'Кофе на балконе', img: 'kbalcony', text: 'Пока на газовой плите варится кофе, можно выйти на балкон кухни и посмотреть, как просыпается двор.' },
+    { time: '08:40', title: 'Дорога на работу', img: 'hall', text: 'Куртка из шкафа в прихожей, и через 5 минут пешком вы на Севастопольской. Серая ветка довезёт до центра без пересадок.' },
+    { time: '13:00', title: 'Работа из дома', img: 'room', text: 'Тем, кто сегодня работает из дома, достаётся стол у окна в комнате за гостиной.' },
+    { time: '19:00', title: 'Ужин', img: 'kitchen', text: 'Стол у окна на кухне, ужин на четверых. А потом все перебираются в гостиную.' },
+    { time: '20:30', title: 'Вечер вместе', img: 'living', text: 'Диван, торшер и закат с южной стороны. Если приехали гости, диван раскладывается.' },
+    { time: '22:30', title: 'Тишина', img: 'sbalcony', text: 'Двор закрыт шлагбаумом, машин под окнами нет. Последний взгляд на огни района с девятого этажа, и спать.' }
+  ];
+  var Q = [
+    { id: 'people', title: 'Сколько вас будет жить?', opts: [{ label: 'Двое' }, { label: 'Трое' }, { label: 'Четверо' }, { label: 'Пятеро и больше', fail: 'Квартира рассчитана на семью до 4 человек.' }] },
+    { id: 'term', title: 'На какой срок ищете?', opts: [{ label: 'Несколько месяцев', warn: 'Собственник ищет жильцов от 11 месяцев.' }, { label: 'Год и дольше' }] },
+    { id: 'pets', title: 'Есть питомцы?', opts: [{ label: 'Нет' }, { label: 'Есть', warn: 'Питомцы по договорённости, с доплатой.' }] },
+    { id: 'smoke', title: 'Кто-то курит?', opts: [{ label: 'Нет' }, { label: 'Да', warn: 'В квартире не курят, только на улице.' }] },
+    { id: 'main', title: 'Что для вас главное?', opts: [
+      { label: 'Метро рядом', perk: 'До Севастопольской 5 минут пешком, до Каховской 4.' },
+      { label: 'Отдельная спальня', perk: 'Спальня 14,4 м² с отдельной дверью из коридора.' },
+      { label: 'Балкон', perk: 'Балконов два, оба застеклены.' },
+      { label: 'Тихий двор', perk: 'Двор закрыт шлагбаумом, машины стоят на парковке.' }] }
+  ];
+  var FAQ = [
+    { q: 'Можно с детьми?', a: 'Да, квартира как раз для семьи: есть отдельная спальня и комната, которую легко сделать детской.' },
+    { q: 'А с питомцем?', a: 'По договорённости с собственником, с доплатой.' },
+    { q: 'Какой залог?', a: '95 000 ₽. Его можно внести в два платежа: за первый и второй месяц.' },
+    { q: 'На какой срок сдаётся квартира?', a: 'От 11 месяцев, по договору с актом приёма-передачи и описью.' },
+    { q: 'Мебель и техника есть?', a: 'Да: двуспальная кровать, раскладной диван, шкафы, холодильник, стиральная машина и газовая плита.' },
+    { q: 'Где парковаться?', a: 'Во дворе за шлагбаумом есть парковка.' },
+    { q: 'Кто показывает квартиру?', a: 'Алика. Позвоните или напишите, договоримся об удобном времени.' }
+  ];
+
+  var st = { cur: 'hall', visited: ['hall'], found: [], flipped: [], day: 0, ans: {}, faq: -1 };
+  var $ = function (id) { return document.getElementById(id); };
+  function img(k) { return 'img/' + k + '.jpg'; }
+  function has(arr, x) { return arr.indexOf(x) >= 0; }
+
+  /* ---------- анимации ---------- */
+  var M = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (M) document.documentElement.classList.add('js-motion');
+  var COLORS = ['#5E7A5B', '#B98A55', '#33305A', '#F3C969', '#9BB894', '#E8A68B'];
+  var fx = document.createElement('div'); fx.className = 'fx'; fx.setAttribute('aria-hidden', 'true'); document.body.appendChild(fx);
+  function rnd(a, b) { return a + Math.random() * (b - a); }
+  function restart(el, cls) { if (!el || !M) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+  function particle(el, frames, opts) { fx.appendChild(el); el.animate(frames, opts).onfinish = function () { el.remove(); }; }
+  function burst(x, y) {
+    if (!M || !fx.animate) return;
+    for (var i = 0; i < 16; i++) {
+      var p = document.createElement('span'); p.className = 'pt';
+      p.innerHTML = STAR.replace('#5E7A5B', COLORS[i % COLORS.length]);
+      p.style.left = (x - 8) + 'px'; p.style.top = (y - 8) + 'px';
+      var a = rnd(0, Math.PI * 2), r = rnd(45, 120);
+      particle(p, [{ transform: 'scale(.3)', opacity: 1 },
+        { transform: 'translate(' + Math.cos(a) * r + 'px,' + Math.sin(a) * r + 'px) scale(' + rnd(.8, 1.5) + ') rotate(' + rnd(-200, 200) + 'deg)', opacity: 0 }],
+        { duration: rnd(650, 1050), easing: 'cubic-bezier(.2,.7,.2,1)' });
+    }
+  }
+  function confetti() {
+    if (!M || !fx.animate) return;
+    var W = innerWidth, H = innerHeight;
+    for (var i = 0; i < 110; i++) {
+      var c = document.createElement('i'); c.className = 'cf';
+      c.style.background = COLORS[i % COLORS.length];
+      c.style.left = rnd(0, W) + 'px'; c.style.top = '-24px';
+      c.style.width = rnd(6, 11) + 'px'; c.style.height = rnd(9, 16) + 'px';
+      if (i % 4 === 0) c.style.borderRadius = '50%';
+      var dr = rnd(-140, 140);
+      particle(c, [{ transform: 'translate(0,0) rotate(0)' },
+        { transform: 'translate(' + dr / 2 + 'px,' + H * .5 + 'px) rotate(' + rnd(180, 540) + 'deg)', offset: .5 },
+        { transform: 'translate(' + dr + 'px,' + (H + 60) + 'px) rotate(' + rnd(540, 1080) + 'deg)' }],
+        { duration: rnd(2300, 3800), delay: rnd(0, 800), easing: 'cubic-bezier(.3,.2,.6,1)', fill: 'backwards' });
+    }
+  }
+  function countUp(el, to) {
+    var tail = el.textContent.replace(/^[\d,]+/, ''), dec = to % 1 ? 1 : 0, t0 = performance.now();
+    (function step(now) {
+      var k = Math.min(1, (now - t0) / 1100), v = to * (1 - Math.pow(1 - k, 3));
+      el.textContent = v.toFixed(dec).replace('.', ',') + tail;
+      if (k < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function go(id) {
+    st.cur = id;
+    if (!has(st.visited, id)) st.visited.push(id);
+    renderTour();
+  }
+
+  var lastFlip = -1;
+  function renderFacts() {
+    $('facts').innerHTML = FACTS.map(function (f, i) {
+      var open = has(st.flipped, i);
+      return '<button class="fact' + (open ? ' open' : '') + (M && i === lastFlip ? ' flip' : '') + '" aria-pressed="' + open + '" data-fact="' + i + '">' +
+        (open ? '<span style="font-size:16px;line-height:1.45">' + f.back + '</span>'
+              : '<span class="big">' + f.big + '</span><span class="muted">' + f.small + '</span>') + '</button>';
+    }).join('');
+  }
+
+  var lastRoom = null, lastFound = 0, me = null;
+  function moveMarker() {
+    var b = document.querySelector('#plan .room[data-room="' + st.cur + '"]');
+    if (!b) return;
+    if (!me) { me = document.createElement('span'); me.className = 'plan-me'; me.innerHTML = '<img src="img/domovoy.png" alt="">'; $('plan').appendChild(me); }
+    var l = parseFloat(b.style.left), t = parseFloat(b.style.top), w = parseFloat(b.style.width), h = parseFloat(b.style.height);
+    me.style.left = (l + w * (w > 20 ? .8 : .5)) + '%';
+    me.style.top = (t + h * (w > 20 ? .5 : .25) + (h < 7 ? 1 : 0)) + '%';
+    restart(me, 'go');
+  }
+  function renderTour() {
+    var s = STOPS[st.cur], changed = lastRoom !== st.cur;
+    lastRoom = st.cur;
+    var buttons = document.querySelectorAll('#plan .room');
+    for (var i = 0; i < buttons.length; i++) {
+      var r = buttons[i].getAttribute('data-room');
+      buttons[i].setAttribute('aria-pressed', r === st.cur ? 'true' : 'false');
+      buttons[i].classList.toggle('visited', has(st.visited, r));
+    }
+    var found = has(st.found, st.cur);
+    var photo = '<div class="photo' + (changed ? ' anim-photo' : '') + '"><div class="photo-in ' + (s.v ? 'v' : 'h') + '"><img src="' + img(st.cur) + '" alt="' + s.alt + '">' +
+      (found ? '<p class="secret"><strong>Секрет домовёнка. </strong>' + s.secret + '</p>'
+             : '<button class="spark" data-spark="1" aria-label="Секрет домовёнка" style="left:' + s.sx + ';top:' + s.sy + '">' + STAR + '</button>') +
+      '</div></div>';
+    $('stop').innerHTML = photo +
+      '<div style="display:flex;gap:14px;align-items:flex-start"><div class="avatar' + (changed ? ' anim-hop' : '') + '" style="width:56px;height:56px"><img src="img/domovoy.png" alt="" style="width:42px;display:block;margin-bottom:-3px"></div><p class="bubble' + (changed ? ' anim-bubble' : '') + '">' + s.line + '</p></div>' +
+      '<div class="stack" style="gap:10px"><h3 class="h3">' + s.title + '</h3><ul class="list' + (changed ? ' anim-list' : '') + '">' + s.facts.map(function (f, i) { return '<li style="--i:' + i + '">' + f + '</li>'; }).join('') + '</ul></div>' +
+      '<div class="row" style="gap:12px"><button class="btn dark" data-next="1">' + s.nextLabel + '</button>' + (s.back ? '<button class="btn outline" data-back="1">Назад</button>' : '') + '</div>';
+    $('visited-label').textContent = 'Осмотрено ' + st.visited.length + ' из 10';
+    $('found-label').textContent = 'Секретов найдено ' + st.found.length + ' из 10';
+    $('visited-bar').style.width = (st.visited.length * 10) + '%';
+    $('found-bar').style.width = (st.found.length * 10) + '%';
+    var wasHidden = $('finish').hidden;
+    $('finish').hidden = st.visited.length < 10;
+    $('all-found').hidden = st.found.length < 10;
+    if (changed) moveMarker();
+    if (st.found.length !== lastFound) { restart($('found-label'), 'bump'); if (st.found.length === 10) confetti(); }
+    lastFound = st.found.length;
+    if (wasHidden && !$('finish').hidden) { restart($('finish'), 'show'); confetti(); }
+  }
+
+  var lastDay = null;
+  function renderDay() {
+    var d = DAY[st.day];
+    if (lastDay !== null && lastDay !== st.day) { restart($('day-img'), 'swap'); restart($('day-txt'), 'swap-t'); }
+    lastDay = st.day;
+    $('times').innerHTML = DAY.map(function (t, i) {
+      return '<button class="time" data-day="' + i + '" aria-pressed="' + (i === st.day) + '"><b>' + t.time + '</b><small>' + t.title + '</small></button>';
+    }).join('');
+    $('day-img').src = img(d.img);
+    $('day-img').alt = d.title;
+    $('day-time').textContent = d.time;
+    $('day-title').textContent = d.title;
+    $('day-text').textContent = d.text;
+    $('day-prev').hidden = st.day === 0;
+    $('day-next').hidden = st.day === DAY.length - 1;
+  }
+
+  var SKY = ['#F4C9A8', '#F6D9BC', '#DCE8F0', '#CFE3F2', '#C6DFF3', '#BFDCF4', '#BFDCF4', '#C6DFF3', '#CFE3F2', '#E9DFC9', '#F3D3A2', '#F0B98C', '#D99A8E', '#8E7FA8', '#4F4B7A'];
+  function lerpHex(a, b, k) {
+    var r = '#';
+    for (var i = 1; i < 7; i += 2) { var x = parseInt(a.substr(i, 2), 16), y = parseInt(b.substr(i, 2), 16); r += ('0' + Math.round(x + (y - x) * k).toString(16)).slice(-2); }
+    return r;
+  }
+  function renderSun() {
+    var h = Number($('hour').value);
+    var t = (h - 7) / 14, u = 1 - t;
+    $('sunball').style.left = (u * u * 40 + 2 * u * t * 500 + t * t * 960) / 10 + '%';
+    $('sunball').style.top = (u * u * 210 + 2 * u * t * -110 + t * t * 210) / 2.2 + '%';
+    var i0 = Math.min(13, Math.floor(h - 7));
+    $('sky').style.backgroundColor = lerpHex(SKY[i0], SKY[i0 + 1], h - 7 - i0);
+    $('sky').classList.toggle('night', h >= 19.5);
+    var phase = h < 11 ? 'east' : (h < 16 ? 'south' : 'west');
+    var lines = { east: 'Утро: солнце на кухне и в спальне, завтракать приятно.', south: 'День: солнце уходит в гостиную и на её балкон.', west: 'Вечер: закат светит в комнату за гостиной.' };
+    var later = { east: 'Солнце здесь с утра до 11', south: 'Солнце здесь с 11 до 16', west: 'Солнце здесь после 16' };
+    var hh = Math.floor(h), mm = Math.round((h - hh) * 60);
+    $('hour-label').textContent = (hh < 10 ? '0' : '') + hh + ':' + (mm < 10 ? '0' : '') + mm;
+    $('sun-line').textContent = lines[phase];
+    var cards = document.querySelectorAll('.sun');
+    for (var i = 0; i < cards.length; i++) {
+      var k = cards[i].getAttribute('data-sun');
+      cards[i].classList.toggle('on', k === phase);
+      cards[i].querySelector('.note').textContent = k === phase ? 'Сейчас здесь солнце' : later[k];
+    }
+  }
+
+  var lastPick = '', lastTitle = '';
+  function renderQuiz() {
+    var answered = 0, fails = [], warns = [], perks = [];
+    $('quiz-list').innerHTML = Q.map(function (q, qi) {
+      var picked = st.ans[q.id];
+      if (picked !== undefined) answered++;
+      return '<div class="stack" style="gap:12px"><p style="margin:0;font-weight:600;font-size:18px">' + q.title + '</p><div class="row" style="gap:10px">' +
+        q.opts.map(function (o, i) {
+          var sel = picked === i;
+          if (sel && o.fail) fails.push(o.fail);
+          if (sel && o.warn) warns.push(o.warn);
+          if (sel && o.perk) perks.push(o.perk);
+          return '<button class="opt' + (M && qi + '-' + i === lastPick ? ' just' : '') + '" data-q="' + qi + '" data-o="' + i + '" aria-pressed="' + sel + '">' + o.label + '</button>';
+        }).join('') + '</div></div>';
+    }).join('');
+    $('quiz-count').textContent = 'Пять вопросов, полминуты. Отвечено ' + answered + ' из 5.';
+    var box = $('quiz-result');
+    if (answered < Q.length) { box.hidden = true; box.innerHTML = ''; lastTitle = ''; return; }
+    var title = fails.length ? 'Скорее не подойдёт' : (warns.length ? 'Подходит, но есть условия' : 'Похоже, это ваша квартира');
+    var bg = fails.length ? '#F1DCD6' : (warns.length ? '#F3E3C2' : '#DCE5D6');
+    var lines = perks.concat(warns, fails);
+    if (!fails.length && !warns.length) lines.push('Всё совпадает. Осталось увидеть квартиру вживую.');
+    box.innerHTML = '<div class="result" style="background:' + bg + '"><p class="display" style="margin:0;font-weight:600;font-size:26px">' + title + '</p><ul class="list">' +
+      lines.map(function (l) { return '<li>' + l + '</li>'; }).join('') + '</ul><div class="row" style="gap:12px;padding-top:6px"><a href="#contacts" class="btn dark">Договориться о просмотре</a><button class="btn outline" data-reset="1">Пройти заново</button></div></div>';
+    box.hidden = false;
+    if (title !== lastTitle) { restart(box.firstChild, 'anim'); if (!fails.length && !warns.length) confetti(); }
+    lastTitle = title;
+  }
+
+  function renderFaq() {
+    $('faq').innerHTML = FAQ.map(function (f, i) {
+      var open = st.faq === i;
+      return '<div class="faq"><button data-faq="' + i + '" aria-expanded="' + open + '"><span>' + f.q + '</span><span class="sign" aria-hidden="true">' + (open ? '−' : '+') + '</span></button>' + (open ? '<p>' + f.a + '</p>' : '') + '</div>';
+    }).join('');
+  }
+
+  function scrollToId(id) { var el = $(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('button');
+    if (!t) return;
+    if (t.hasAttribute('data-room')) { go(t.getAttribute('data-room')); return; }
+    if (t.hasAttribute('data-jump')) { go(t.getAttribute('data-jump')); scrollToId('tour'); return; }
+    if (t.hasAttribute('data-spark')) { var r = t.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + r.height / 2); if (!has(st.found, st.cur)) st.found.push(st.cur); renderTour(); return; }
+    if (t.hasAttribute('data-next')) { var n = STOPS[st.cur].next; if (n === 'day') scrollToId('day'); else go(n); return; }
+    if (t.hasAttribute('data-back')) { go(STOPS[st.cur].back); return; }
+    if (t.hasAttribute('data-fact')) { var i = Number(t.getAttribute('data-fact')); lastFlip = i; var k = st.flipped.indexOf(i); if (k >= 0) st.flipped.splice(k, 1); else st.flipped.push(i); renderFacts(); return; }
+    if (t.hasAttribute('data-day')) { st.day = Number(t.getAttribute('data-day')); renderDay(); return; }
+    if (t.id === 'day-prev') { if (st.day > 0) st.day--; renderDay(); return; }
+    if (t.id === 'day-next') { if (st.day < DAY.length - 1) st.day++; renderDay(); return; }
+    if (t.hasAttribute('data-q')) { lastPick = t.getAttribute('data-q') + '-' + t.getAttribute('data-o'); st.ans[Q[Number(t.getAttribute('data-q'))].id] = Number(t.getAttribute('data-o')); renderQuiz(); return; }
+    if (t.hasAttribute('data-reset')) { st.ans = {}; renderQuiz(); return; }
+    if (t.hasAttribute('data-faq')) { var f = Number(t.getAttribute('data-faq')); st.faq = st.faq === f ? -1 : f; renderFaq(); return; }
+    if (t.id === 'sun-play') { playSun(); return; }
+    if (t.id === 'copy') {
+      var done = function (ok) { t.textContent = ok ? 'Номер скопирован' : '+7 909 945-36-87'; };
+      if (navigator.clipboard) navigator.clipboard.writeText('+79099453687').then(function () { done(true); }, function () { done(false); });
+      else done(false);
+    }
+  });
+  $('hour').addEventListener('input', function () { stopSun(); renderSun(); });
+
+  var sunRaf = 0;
+  function stopSun() { if (sunRaf) cancelAnimationFrame(sunRaf); sunRaf = 0; $('sun-play').textContent = '▶ Прокрутить день'; }
+  function playSun() {
+    if (sunRaf) { stopSun(); return; }
+    var from = Number($('hour').value); if (from >= 21) from = 7;
+    var t0 = performance.now(), dur = (21 - from) / 14 * 8000;
+    $('sun-play').textContent = '❚❚ Пауза';
+    (function step(now) {
+      var k = Math.min(1, (now - t0) / dur);
+      $('hour').value = from + (21 - from) * k; renderSun();
+      if (k < 1) sunRaf = requestAnimationFrame(step); else stopSun();
+    })(t0);
+  }
+
+  renderFacts(); renderTour(); renderDay(); renderSun(); renderQuiz(); renderFaq();
+
+  /* заголовок по словам и чипсы */
+  if (M) {
+    var h1 = document.querySelector('h1');
+    h1.innerHTML = h1.textContent.split(' ').map(function (w, i) { return '<span class="w" style="--d:' + (.1 + i * .07).toFixed(2) + 's">' + w + '</span>'; }).join(' ');
+    var chips = $('chips').children;
+    for (var c = 0; c < chips.length; c++) { chips[c].classList.add('pop'); chips[c].style.setProperty('--d', (.6 + c * .07).toFixed(2) + 's'); }
+  }
+
+  /* появление блоков при прокрутке */
+  var rvEls = document.querySelectorAll('.rv,.rv-kids');
+  function shown(el) {
+    el.classList.add('in');
+    if (el.id === 'facts') {
+      var bigs = el.querySelectorAll('.big');
+      FACTS.forEach(function (f, i) { if (f.count && bigs[i] && M) countUp(bigs[i], f.count); });
+    }
+    setTimeout(function () { el.classList.remove('rv', 'rv-kids', 'in'); }, 1700);
+  }
+  if (M && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); shown(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+    for (var r = 0; r < rvEls.length; r++) io.observe(rvEls[r]);
+  } else {
+    for (var r2 = 0; r2 < rvEls.length; r2++) rvEls[r2].classList.remove('rv', 'rv-kids');
+  }
+
+  /* полоса прокрутки */
+  var pb = $('progress'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var max = document.documentElement.scrollHeight - innerHeight;
+    pb.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
