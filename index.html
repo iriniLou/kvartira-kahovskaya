@@ -104,6 +104,9 @@ input[type=range]{accent-color:var(--sage);flex:1 1 280px;height:44px}
 .card{flex:1 1 320px;display:flex;flex-direction:column;gap:14px;border:1.5px solid var(--line);border-radius:20px;padding:28px;background:#fff}
 ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 [hidden]{display:none!important}
+.phone{font-variant-numeric:tabular-nums;white-space:nowrap}
+.phone.shown{animation:phoneGlow 1.2s ease}
+@keyframes phoneGlow{30%{color:#DCE5D6;text-shadow:0 0 18px rgba(220,229,214,.8)}}
 /* ---------- анимации ---------- */
 .btn,.opt,.time,.fact,.room,.sun{transition:transform .25s ease,box-shadow .25s ease,background-color .35s,color .35s,border-color .35s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(43,39,36,.55)}
@@ -194,7 +197,7 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 
 <div class="wrap row" style="padding-top:20px;justify-content:space-between;align-items:center;gap:12px">
 <span class="muted">Москва, Симферопольский бульвар</span>
-<a href="tel:+79099453687" style="font-weight:600;text-decoration:none;font-size:15px">Алика, +7 909 945-36-87</a>
+<a href="#contacts" style="font-weight:600;text-decoration:none;font-size:15px">Позвонить Алике</a>
 </div>
 
 <div class="wrap" style="padding-top:40px;padding-bottom:64px">
@@ -398,12 +401,12 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 <div class="stack rv" style="flex:999 1 480px;gap:22px;min-width:0">
 <h2 class="display" style="margin:0;font-weight:600;font-size:clamp(28px,3.4vw,44px);line-height:1.15">Хотите посмотреть вживую?</h2>
 <p style="margin:0;color:#E6E0D6;max-width:36em">Показывает Алика. Позвоните или напишите, договоримся об удобном времени.</p>
-<p class="display" style="margin:0;font-weight:500;font-size:clamp(24px,3vw,34px)">Алика, +7 909 945-36-87</p>
+<p class="display" style="margin:0;font-weight:500;font-size:clamp(24px,3vw,34px)">Алика, <span id="phone" class="phone" aria-live="polite">+7 ••• •••-••-••</span></p>
 <div class="row" style="gap:12px">
-<a href="tel:+79099453687" class="btn big light">Позвонить</a>
-<a href="https://wa.me/79099453687" target="_blank" rel="noopener" class="btn big ghost">Написать в WhatsApp</a>
-<a href="https://t.me/+79099453687" target="_blank" rel="noopener" class="btn big ghost">Написать в Telegram</a>
-<button class="btn big ghost" id="copy">Скопировать номер</button>
+<button class="btn big light" id="call" type="button">Позвонить</button>
+<a href="#contacts" data-msg="wa" target="_blank" rel="noopener" class="btn big ghost">Написать в WhatsApp</a>
+<a href="#contacts" data-msg="tg" target="_blank" rel="noopener" class="btn big ghost">Написать в Telegram</a>
+<button class="btn big ghost" id="copy" hidden>Скопировать номер</button>
 </div>
 </div>
 <div style="flex:1 1 200px;display:flex;justify-content:center">
@@ -500,6 +503,42 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
   var $ = function (id) { return document.getElementById(id); };
   function img(k) { return 'img/' + k + '.jpg'; }
   function has(arr, x) { return arr.indexOf(x) >= 0; }
+
+  /* ---------- телефон: скрыт, пока не нажмут «Позвонить» ---------- */
+  var PH = ['7', '909', '945', '36', '87'].join('');
+  var TOUCH = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+  var phoneShown = false;
+  function phoneText() { return '+' + PH[0] + ' ' + PH.substr(1, 3) + ' ' + PH.substr(4, 3) + '-' + PH.substr(7, 2) + '-' + PH.substr(9, 2); }
+  (function () {
+    var wa = document.querySelector('[data-msg="wa"]'), tg = document.querySelector('[data-msg="tg"]');
+    if (wa) wa.href = 'https://wa.me/' + PH;
+    if (tg) tg.href = 'https://t.me/+' + PH;
+  })();
+  function showPhone() {
+    phoneShown = true;
+    var el = document.getElementById('phone'), full = phoneText();
+    $('call').textContent = 'Позвонить: ' + full;
+    $('copy').hidden = false;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { el.textContent = full; return; }
+    var digits = [], k;
+    for (k = 0; k < full.length; k++) if (/\d/.test(full[k])) digits.push(k);
+    var t0 = performance.now();
+    (function step(now) {
+      var out = '', done = 0;
+      for (var i = 0; i < full.length; i++) {
+        var di = digits.indexOf(i);
+        if (di < 0) { out += full[i]; continue; }
+        var at = di * 70;
+        if (now - t0 >= at + 260) { out += full[i]; done++; }
+        else if (now - t0 >= at) out += Math.floor(Math.random() * 10);
+        else out += '•';
+      }
+      el.textContent = out;
+      if (done < digits.length) requestAnimationFrame(step);
+      else el.classList.add('shown');
+    })(t0);
+  }
 
   /* ---------- анимации ---------- */
   var M = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -702,9 +741,10 @@ ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
     if (t.hasAttribute('data-reset')) { st.ans = {}; renderQuiz(); return; }
     if (t.hasAttribute('data-faq')) { var f = Number(t.getAttribute('data-faq')); st.faq = st.faq === f ? -1 : f; renderFaq(); return; }
     if (t.id === 'sun-play') { playSun(); return; }
+    if (t.id === 'call') { if (!phoneShown) { showPhone(); if (TOUCH) location.href = 'tel:+' + PH; } else location.href = 'tel:+' + PH; return; }
     if (t.id === 'copy') {
-      var done = function (ok) { t.textContent = ok ? 'Номер скопирован' : '+7 909 945-36-87'; };
-      if (navigator.clipboard) navigator.clipboard.writeText('+79099453687').then(function () { done(true); }, function () { done(false); });
+      var done = function (ok) { t.textContent = ok ? 'Номер скопирован' : phoneText(); };
+      if (navigator.clipboard) navigator.clipboard.writeText('+' + PH).then(function () { done(true); }, function () { done(false); });
       else done(false);
     }
   });
